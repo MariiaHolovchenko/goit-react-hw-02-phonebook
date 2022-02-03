@@ -12,8 +12,6 @@ class App extends React.Component {
       { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
     ],
     filter: '',
-    name: '',
-    number: ''
   };
   contactName = () => {
     return this.state.contacts.map(contact => contact.name.toLowerCase());
@@ -47,7 +45,7 @@ class App extends React.Component {
       <div>
         <h1>Phonebook</h1>
         <ContactForm submit={this.formSubmitHandler} />
-        <h2>Contacts list</h2>
+        <h2>Contacts</h2>
         <Filter filterValue={this.state.filter} change={this.searchInputChange} />
         <ContactList contacts={this.searchFilter()} onDelete={this.deleteContact} />
       </div>
